@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Memory {
-  static const operations = const ['%', '/', 'X', '-', '+', '='];
+  static const operations = const ['%', '/', '*', '-', '+', '='];
 
   final _buffer = [0.0, 0.0];
   int _bufferIndex = 0;
@@ -78,11 +78,11 @@ class Memory {
 
   _calculate() {
     switch (_operation) {
-      case '%':
-        return _buffer[0] % _buffer[1];
+      // case '%':
+      //   return _buffer[0] % _buffer[1];
       case '/':
         return _buffer[0] / _buffer[1];
-      case 'X':
+      case '*':
         return _buffer[0] * _buffer[1];
       case '+':
         return _buffer[0] + _buffer[1];
